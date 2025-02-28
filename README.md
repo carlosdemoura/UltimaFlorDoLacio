@@ -10,6 +10,8 @@ Each main function is intended to give random quotes from authors who wrote in P
 
 We currently have texts by Fernando Pessoa and Lupicínio Rodrigues, available by the functions `Pessoa()` and `Lupicinio()` (respectively, of course).
 
+Very special thanks to [Tomás Bernardes](https://github.com/tomasbp2/) for his short course on [R packages](https://github.com/tomasbp2/Curso-Rpacotes).
+
 Enjoy this ["ignorant and beautiful"](https://pt.wikipedia.org/wiki/Olavo_Bilac#L%C3%ADngua_Portuguesa) language!
 
 ## Installation
@@ -23,7 +25,7 @@ devtools::install_github("carlosdemoura/UltimaFlorDoLacio")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+The code below should return the first 1000 ish characters of today's texts by Fernando Pessoa and Lupicínio Rodrigues:
 
 ``` r
 library(UltimaFlorDoLacio)
