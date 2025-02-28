@@ -1,0 +1,5 @@
+^renv$
+^renv\.lock$
+^UltimaFlorDoLacio\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
