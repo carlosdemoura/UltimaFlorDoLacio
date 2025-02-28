@@ -1,15 +1,18 @@
-#' Get a text by Pessoa every day.
+#' Get a text by Pessoa every day
 #'
-#' Draw a random text by Portuguese poet Fernando Pessoa from <arquivopessoa.net> based on an seed.
+#' Draw a random text by Portuguese poet Fernando Pessoa from
+#' <arquivopessoa.net> based on an seed.
 #'
-#' @param max.char maximum number of characters to be returned, if NULL the text is not cropped.
-#' @param flag Character, if max.char is used, everything after the last time this character appears will be removed.
-#' @param seed a seed for the draw, if NULL the current day is used.
+#' @inheritParams mock_function_for_documentation
 #'
-#' @return A text by Pessoa.
-#' @export
+#' @return list; contains author, title, text, and source.
 #'
 #' @examples pessoa(max.char = 1000)  # should return the first 1000 ish characters of today's Pessoa text.
+#'
+#' @export
+#'
+#' @import rvest
+#' @import purrr
 Pessoa = decorate(function() {
   draw = floor(runif(1, 4, 4544.99))
 

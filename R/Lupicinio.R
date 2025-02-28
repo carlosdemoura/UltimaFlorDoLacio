@@ -1,15 +1,18 @@
 #' Get a song lyric by Lupicínio every day.
 #'
-#' Draw a random song lyric by Brazilian musician Lupicínio Rodrigues from <www.letras.mus.br/> based on an seed.
+#' Draw a random song lyric by Brazilian musician Lupicínio Rodrigues from
+#' <www.letras.mus.br/> based on an seed.
 #'
-#' @param max.char maximum number of characters to be returned, if NULL the song lyric is not cropped.
-#' @param flag Character, if max.char is used, everything after the last time this character appears will be removed.
-#' @param seed a seed for the draw, if NULL the current day is used.
+#' @inheritParams mock_function_for_documentation
 #'
-#' @return A song lyric by Lupicínio.
-#' @export
+#' @return list; contains author, title, text, and source.
 #'
 #' @examples lupicinio(max.char = 1000)  # should return the first 1000 ish characters of today's Lupicínio song lyric.
+#'
+#' @export
+#'
+#' @import rvest
+#' @import purrr
 Lupicinio = decorate(function() {
   songs = "https://www.letras.mus.br/lupcinio-rodrigues/" |>
     rvest::read_html() |>
