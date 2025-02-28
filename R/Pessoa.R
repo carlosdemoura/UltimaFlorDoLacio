@@ -5,9 +5,10 @@
 #'
 #' @inheritParams mock_function_for_documentation
 #'
-#' @return list; contains author, title, text, and source.
+#' @return list; contains author, title, text, and source
 #'
-#' @examples pessoa(max.char = 1000)  # should return the first 1000 ish characters of today's Pessoa text.
+#' @examples Pessoa(max.char = 1000)
+#' # should return the first 1000 ish characters of today's Pessoa text.
 #'
 #' @export
 #'

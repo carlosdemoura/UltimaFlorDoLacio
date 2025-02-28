@@ -9,9 +9,10 @@
 decorate = function(f) {
 
   wrapper = function(max.char = NULL, flag = " ", seed = Sys.Date()) {
-    stopifnot(is.double(seed)      | is.null(seed),
-              is.integer(max.char) | is.null(max.char),
-              is.character(flag)
+    stopifnot(
+      "seed must be double"          = is.double(seed),
+      "max.char must be int or NULL" = any(is.int(max.char), is.null(max.char)),
+      "flag must be a character"     = is.character(flag)
     )
 
     set.seed(seed)
@@ -28,7 +29,7 @@ decorate = function(f) {
 }
 
 
-#' Remove last characters from text and adjust it.
+#' Remove last characters from text and adjust it
 #'
 #' Cuts everything on a string after last time a flag character is present.
 #'
@@ -36,8 +37,6 @@ decorate = function(f) {
 #' @param flag character; everything after the last time this character appears will be removed.
 #'
 #' @return string; text cropped and adjusted.
-#'
-#' @examples adjust_text(text = "some-text\n some-more-text", flag  = "\n")  # shoud return "some-text".
 adjust_text = function(text, flag = " ") {
   split = text |>
     strsplit(paste0("[", flag ,"]")) |>
@@ -52,11 +51,30 @@ adjust_text = function(text, flag = " ") {
 
   text
 }
+#adjust_text(text = "some-text\n some-more-text", flag  = "\n")  # shoud return "some-text".
 
 
-#' Mock function for the sole purpose of
+#' Mock function for the sole purpose of documenting main functions
 #'
 #' @param max.char integer; maximum number of characters to be returned; if NULL (DEFAULT) the text is not cropped.
 #' @param flag     character; if max.char is used, everything after the last time this character appears will be removed; the DEFAULT is a single space " ".
 #' @param seed     numeric; a seed for the draw; the DEFAULT is the system's current day.
-mock_function_for_documentation = function() {}
+mock_function_for_documentation = function(max.char = 0, flag = 0, seed = 0) {TRUE}
+
+
+#' Verify if a variable is as integer number
+#'
+#' @param x numeric.
+#'
+#' @return boolean;
+#' * `TRUE`  if `x` is an integer number,
+#' * `FALSE` if it is not.
+is.int = function(x) {
+  if (is.numeric(x)) {
+    if (x == round(x)) {
+      return(TRUE)
+    }
+  }
+
+  return(FALSE)
+}

@@ -1,4 +1,4 @@
-#' Get a song lyric by Lupicínio every day.
+#' Get a song lyric by Lupicínio every day
 #'
 #' Draw a random song lyric by Brazilian musician Lupicínio Rodrigues from
 #' <www.letras.mus.br/> based on an seed.
@@ -7,7 +7,8 @@
 #'
 #' @return list; contains author, title, text, and source.
 #'
-#' @examples lupicinio(max.char = 1000)  # should return the first 1000 ish characters of today's Lupicínio song lyric.
+#' @examples Lupicinio(max.char = 1000)
+#' # should return the first 1000 ish characters of today's Lupicínio song lyric.
 #'
 #' @export
 #'

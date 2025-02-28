@@ -4,5 +4,5 @@ test_that("Pessoa() works", {
            text = "Argumento do jornalista\n\nAs artes todas são uma futilidade perante a literatura. As artes que se ...",
            source = "http://arquivopessoa.net/textos/4075"
   )
-  expect_equal(pessoa(0, 100), x)
+  expect_equal(Pessoa(max.char = 100, seed = 0), x)
 })
