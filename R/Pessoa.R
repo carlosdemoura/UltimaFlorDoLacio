@@ -3,7 +3,9 @@
 #' Draw a random text by Portuguese poet Fernando Pessoa from
 #' <arquivopessoa.net> based on an seed.
 #'
-#' @inheritParams mock_function_for_documentation
+#' @param max.char integer; maximum number of characters to be returned; if NULL (DEFAULT) the text is not cropped.
+#' @param flag     character; if max.char is used, everything after the last time this character appears will be removed; the DEFAULT is a single space " ".
+#' @param seed     numeric; a seed for the draw; if NULL (DEFAULT) no seed is set.
 #'
 #' @return list; contains author, title, text, and source
 #'
@@ -14,7 +16,7 @@
 #'
 #' @import rvest
 #' @import purrr
-Pessoa = decorate(function() {
+Pessoa = decorator(function() {
   draw = floor(runif(1, 4, 4544.99))
 
   url = paste0("http://arquivopessoa.net/textos/", draw)

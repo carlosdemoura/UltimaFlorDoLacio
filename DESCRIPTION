@@ -3,7 +3,7 @@ Title: Random Texts in Portuguese by Famous Authors
 Version: 0.0.0.9000
 Authors@R: 
     person("Carlos", "de Moura", , "contact@carlosdemoura.com", role = c("aut", "cre"))
-Description: Each main function is intended to give random quotes from authors who wrote in Portuguese. The user can set the seed - if no seed is given, the current system day is set as the seed. The functions are named after these authors and the quotes were extracted from public repositories.
+Description: Each main function is intended to give random quotes (the user can set the seed) from authors who wrote in Portuguese. The functions are named after these authors and the quotes were extracted from public repositories.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

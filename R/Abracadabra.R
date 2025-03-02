@@ -6,17 +6,18 @@
 #' @param f function to be wrapped.
 #'
 #' @return wrapped function.
-decorate = function(f) {
+decorator = function(f) {
 
-  wrapper = function(max.char = NULL, flag = " ", seed = Sys.Date()) {
+  wrapper = function(max.char = NULL, flag = " ", seed = NULL) {
     stopifnot(
-      "seed must be double"          = is.double(seed),
+      "seed must be double or NULL"  = is.double(seed) | is.null(seed),
       "max.char must be int or NULL" = any(is.int(max.char), is.null(max.char)),
       "flag must be a character"     = is.character(flag)
     )
 
-    set.seed(seed)
+    if (!is.null(seed)) set.seed(seed)
     x = f()
+
     if (!is.null(max.char)) {
       x$text = x$text |>
         substring(1, max.char) |>
@@ -54,14 +55,6 @@ adjust_text = function(text, flag = " ") {
 #adjust_text(text = "some-text\n some-more-text", flag  = "\n")  # shoud return "some-text".
 
 
-#' Mock function for the sole purpose of documenting main functions
-#'
-#' @param max.char integer; maximum number of characters to be returned; if NULL (DEFAULT) the text is not cropped.
-#' @param flag     character; if max.char is used, everything after the last time this character appears will be removed; the DEFAULT is a single space " ".
-#' @param seed     numeric; a seed for the draw; the DEFAULT is the system's current day.
-mock_function_for_documentation = function(max.char = 0, flag = 0, seed = 0) {TRUE}
-
-
 #' Verify if a variable is as integer number
 #'
 #' @param x numeric.
@@ -69,6 +62,8 @@ mock_function_for_documentation = function(max.char = 0, flag = 0, seed = 0) {TR
 #' @return boolean;
 #' * `TRUE`  if `x` is an integer number,
 #' * `FALSE` if it is not.
+#'
+#' @export
 is.int = function(x) {
   if (is.numeric(x)) {
     if (x == round(x)) {

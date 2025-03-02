@@ -4,14 +4,14 @@
 \alias{Pessoa}
 \title{Get a text by Pessoa every day}
 \usage{
-Pessoa(max.char = NULL, flag = " ", seed = Sys.Date())
+Pessoa(max.char = NULL, flag = " ", seed = NULL)
 }
 \arguments{
 \item{max.char}{integer; maximum number of characters to be returned; if NULL (DEFAULT) the text is not cropped.}
 
 \item{flag}{character; if max.char is used, everything after the last time this character appears will be removed; the DEFAULT is a single space " ".}
 
-\item{seed}{numeric; a seed for the draw; the DEFAULT is the system's current day.}
+\item{seed}{numeric; a seed for the draw; if NULL (DEFAULT) no seed is set.}
 }
 \value{
 list; contains author, title, text, and source

@@ -6,7 +6,7 @@
 
 The goal of `UltimaFlorDoLacio` is to provide a nice way to get poems/texts in Portuguese in the R environment.
 
-Each main function is intended to give random quotes from authors who wrote in Portuguese. The user can set the seed - if no seed is given, the current system day is set as the seed. The functions are named after these authors and the quotes were extracted from public repositories.
+Each main function is intended to give random quotes (the user can set the seed) from authors who wrote in Portuguese. The functions are named after these authors and the quotes were extracted from public repositories.
 
 We currently have texts by Fernando Pessoa and Lupicínio Rodrigues, available by the functions `Pessoa()` and `Lupicinio()` (respectively, of course).
 
@@ -30,8 +30,8 @@ The code below should return the first 1000 ish characters of today's texts by F
 ``` r
 library(UltimaFlorDoLacio)
 
-Pessoa(1000)
+Pessoa(max.char = 1000, seed = Sys.Date())
 
-Lupicinio(1000)
+Lupicinio(max.char = 1000, seed = Sys.Date())
 ```
 

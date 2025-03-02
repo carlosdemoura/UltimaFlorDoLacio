@@ -3,7 +3,7 @@
 #' Draw a random song lyric by Brazilian musician Lupicínio Rodrigues from
 #' <www.letras.mus.br/> based on an seed.
 #'
-#' @inheritParams mock_function_for_documentation
+#' @inheritParams Pessoa
 #'
 #' @return list; contains author, title, text, and source.
 #'
@@ -14,7 +14,7 @@
 #'
 #' @import rvest
 #' @import purrr
-Lupicinio = decorate(function() {
+Lupicinio = decorator(function() {
   songs = "https://www.letras.mus.br/lupcinio-rodrigues/" |>
     rvest::read_html() |>
     rvest::html_elements("a.songList-table-songName") |>
