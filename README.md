@@ -1,5 +1,5 @@
 
-# UltimaFlorDoLacio
+# UltimaFlorDoLacio <a href="https://github.com/carlosdemoura/UltimaFlorDoLacio"><img src="logo_Lacio/lacio.png" align="right" height="138" /></a>
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -10,7 +10,7 @@ Each main function is intended to give random quotes from authors who wrote in P
 
 We currently have texts by Fernando Pessoa and Lupicínio Rodrigues, available by the functions `Pessoa()` and `Lupicinio()` (respectively, of course).
 
-Very special thanks to [Tomás Bernardes](https://github.com/tomasbp2/) for his short course on [R packages](https://github.com/tomasbp2/Curso-Rpacotes).
+Very special thanks to [Tomás Bernardes](https://github.com/tomasbp2/) for his [short course on R packages](https://github.com/tomasbp2/Curso-Rpacotes).
 
 Enjoy this ["ignorant and beautiful"](https://pt.wikipedia.org/wiki/Olavo_Bilac#L%C3%ADngua_Portuguesa) language!
 
