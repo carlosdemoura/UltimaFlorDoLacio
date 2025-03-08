@@ -2,7 +2,7 @@
 % Please edit documentation in R/Lupicinio.R
 \name{Lupicinio}
 \alias{Lupicinio}
-\title{Get a song lyric by LupicÃ­nio every day}
+\title{Get a song lyric by Lupicínio every day}
 \usage{
 Lupicinio(max.char = NULL, flag = " ", seed = NULL)
 }
@@ -17,11 +17,11 @@ Lupicinio(max.char = NULL, flag = " ", seed = NULL)
 list; contains author, title, text, and source.
 }
 \description{
-Draw a random song lyric by Brazilian musician LupicÃ­nio Rodrigues from
+Draw a random song lyric by Brazilian musician Lupicínio Rodrigues from
 <www.letras.mus.br/> based on an seed.
 }
 \examples{
 Lupicinio(max.char = 1000)
-# should return the first 1000 ish characters of today's LupicÃ­nio song lyric.
+# should return the first 1000 ish characters of today's Lupicínio song lyric.
 
 }
