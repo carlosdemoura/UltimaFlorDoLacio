@@ -2,12 +2,14 @@ Package: UltimaFlorDoLacio
 Title: Random Texts in Portuguese by Famous Authors
 Version: 0.0.0.9000
 Authors@R: 
-    person("Carlos", "de Moura", , "contact@carlosdemoura.com", role = c("aut", "cre"))
-Description: Each main function is intended to give random quotes (the user can set the seed) from authors who wrote in Portuguese. The functions are named after these authors and the quotes were extracted from public repositories.
+    person("Carlos", "de Moura", , "lcbarrosdemoura@gmail.com", role = c("aut", "cre", "cph"))
+Description: Each main function is intended to give random quotes from authors who wrote in Portuguese (the user can set the seed). The functions are named after these authors and the quotes were extracted from public repositories.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Depends:
+    R (>= 4.1.0)
 Imports:
     purrr,
     rvest,

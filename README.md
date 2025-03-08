@@ -2,6 +2,7 @@
 # UltimaFlorDoLacio <a href="https://github.com/carlosdemoura/UltimaFlorDoLacio"><img src="logo_Lacio/lacio.png" align="right" height="138" /></a>
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/carlosdemoura/UltimaFlorDoLacio/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/carlosdemoura/UltimaFlorDoLacio/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of `UltimaFlorDoLacio` is to provide a nice way to get poems/texts in Portuguese in the R environment.

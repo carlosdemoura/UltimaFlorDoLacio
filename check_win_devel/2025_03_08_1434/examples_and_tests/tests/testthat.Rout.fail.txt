@@ -1,0 +1,49 @@
+
+R Under development (unstable) (2025-03-07 r87898 ucrt) -- "Unsuffered Consequences"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # This file is part of the standard setup for testthat.
+> # It is recommended that you do not modify it.
+> #
+> # Where should you do additional test configuration?
+> # Learn more about the roles of various files in:
+> # * https://r-pkgs.org/testing-design.html#sec-tests-files-overview
+> # * https://testthat.r-lib.org/articles/special-files.html
+> 
+> library(testthat)
+> library(UltimaFlorDoLacio)
+> 
+> test_check("UltimaFlorDoLacio")
+[ FAIL 1 | WARN 0 | SKIP 0 | PASS 4 ]
+
+══ Failed tests ════════════════════════════════════════════════════════════════
+── Failure ('test-Lupicinio.R:7:3'): Lupicinio() works ─────────────────────────
+Lupicinio(max.char = 100, seed = 0) (`actual`) not equal to `x` (`expected`).
+
+`actual$author`:   "LupicÃ­nio Rodrigues"
+`expected$author`: "Lupicínio Rodrigues" 
+
+    lines(actual$text)             | lines(expected$text)              
+[1] "Quem vÃª aquele carteiro"     - "Quem vê aquele carteiro"      [1]
+[2] "O dia inteiro feliz a cantar" | "O dia inteiro feliz a cantar" [2]
+[3] "Deixando missivas diversas"   | "Deixando missivas diversas"   [3]
+[4] "Em cada ..."                  - "Em cada lugar"                [4]
+                                   - ""                             [5]
+                                   - "Não ..."                      [6]
+
+[ FAIL 1 | WARN 0 | SKIP 0 | PASS 4 ]
+Error: Test failures
+Execution halted

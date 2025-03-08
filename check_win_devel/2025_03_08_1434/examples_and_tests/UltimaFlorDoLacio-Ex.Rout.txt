@@ -1,0 +1,120 @@
+
+R Under development (unstable) (2025-03-07 r87898 ucrt) -- "Unsuffered Consequences"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "UltimaFlorDoLacio"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> base::assign(".ExTimings", "UltimaFlorDoLacio-Ex.timings", pos = 'CheckExEnv')
+> base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
+> base::assign(".format_ptime",
++ function(x) {
++   if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
++   if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
++   options(OutDec = '.')
++   format(x[1L:3L], digits = 7L)
++ },
++ pos = 'CheckExEnv')
+> 
+> ### * </HEADER>
+> library('UltimaFlorDoLacio')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("Lupicinio")
+> ### * Lupicinio
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: Lupicinio
+> ### Title: Get a song lyric by Lupicínio every day
+> ### Aliases: Lupicinio
+> 
+> ### ** Examples
+> 
+> Lupicinio(max.char = 1000)
+$author
+[1] "LupicÃ­nio Rodrigues"
+
+$title
+[1] "Taberna"
+
+$text
+[1] "Na taberna eu passei o dia\nVendo o entra e sai da freguesia\nQuase esqueci a ingratidÃ£o que te fiz\nE dos tragos por mim ingeridos\nAfoguei parte dos meus sentidos\nChegando hÃ¡ julgar-me um felz\nE vieram entÃ£o as horas mortas\nAs tabernas fecharam as portas\nVoltei, novamente a minha solidÃ£o\nE morrendo, de saudade tua\nVim pra minha casa, que Ã© a rua\nE aqui estou a implorar, perdÃ£o\n\nAmor, a chuva molhava-me as vestes\nEu sinto mesmo estar prestes\nAtÃ© as forÃ§as perder\nAmor faz tanto frio aqui fora\nSe me mandares embora\nTenho medo de morrer\n\nNÃ£o me negues, pelo amor de Deus\nA paz do teu abrigo\nSe nÃ£o me queres mais\nDeixa eu ser sÃ³ teu amigo\n\nPorÃ©m, abre esta porta\nPerdoa tudo que te fiz\nE deixa-me, que morrerei, feliz\n\nPorÃ©m, abre esta porta\nPerdoa tudo que te fiz\nE deixa-me, que morrerei, ..."
+
+$source
+[1] "https://www.letras.mus.br/lupcinio-rodrigues/1410846/"
+
+> # should return the first 1000 ish characters of today's Lupicínio song lyric.
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("Lupicinio", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("Pessoa")
+> ### * Pessoa
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: Pessoa
+> ### Title: Get a text by Pessoa every day
+> ### Aliases: Pessoa
+> 
+> ### ** Examples
+> 
+> Pessoa(max.char = 1000)
+$author
+[1] "Fernando Pessoa"
+
+$title
+[1] "SHAKESPEARE - Great as his tragedies are, none of them is greater than..."
+
+$text
+[1] "SHAKESPEARE\n\nGreat as his tragedies are, none of them is greater than the tragedy of his own life. The Gods gave him all great gifts but one; the one they gave not was the power to use those great gifts greatly. He stands forth as the greatest example of genius, pure genius, genius immortal and unavailing. His creative power was shattered into a thousand fragments by the stress and oppression of like. It is but the shreds of itself. Disjecta membra , said Carlyle, are what we have of any poet, or of any man. Of no poet or man is this truer than of Shakespeare.\n\nHe stands before us, melancholy, witty, at times half insane, never losing his hold on the objective world, ever knowing what he wanted, dreaming ever high purposes and impossible greatnesses, and waking ever to mean ends and low triumphs. This, this was his great experience of life; for there is no great experience of life that is not, finally, the calm experience of a disillusion.\n\nHis wavering purpose; his unsettled will; ..."
+
+$source
+[1] "http://arquivopessoa.net/textos/1209"
+
+> # should return the first 1000 ish characters of today's Pessoa text.
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("Pessoa", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> ### * <FOOTER>
+> ###
+> cleanEx()
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  0.51 0.11 2.65 NA NA 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')
